@@ -13,11 +13,12 @@ computer-related knowledge.
     * [functions](#functions)
     * [the main function](#the-main-function)
     * [hello, world!](#hello-world)
-    * [compilation](#compilation)
-    * [running our program](#running-our-program)
+    * [compilation and execution](#compilation-and-execution)
   * [variables and types](#variables-and-types)
     * [namespaces](#namespaces)
   * [best practices](#best-practices)
+    * [coding style](#coding-style)
+    * [comments](#comments)
 
 ## what is programming? <a name="what-is-programming"></a>
 Before we talk about what programming is, we need to understand what a computer
@@ -27,7 +28,9 @@ simple as adding two numbers or as difficult as identifying objects within an
 image. Computers come in all shapes and sizes, each having their own purpose and
 responsibilities. The computers we use everyday are general purpose computers,
 built to carry out everyday tasks such as writing documents, creating
-presentations, accessing the internet, and so on. 
+presentations, accessing the internet, and so on. Our smartphones are tiny
+computers too, used for many of the same reasons, but also for communicating 
+with others via telephone calls or text messages.
 
 There are three basic components that make a computer, the central processing
 unit (CPU), memory, and input/output (I/O). The CPU is the brain of the
@@ -36,9 +39,12 @@ to perform. While it is executing these complex instructions, it needs to keep
 track of what it is doing, and that's where memory comes into play. A computer
 stores intermediate values (i.e. state) in memory to reference later, as needed.
 There are different types of memory, which we will touch on later. Lastly, there
-is I/O, which is how a computer interacts with the outside world. We humans
-generate input to our computers via our mouse and keyboard, which in turn causes
-output (ex. text on the screen). 
+is I/O, which is how a computer interacts with the humans or other electronic
+devices. We humans generate input to our computers via our mouse and keyboard,
+which in turn causes output (ex. text on the screen). Computers also use I/O to
+expand their functionality or interface with other electronic devices. For
+example, an SD card from your camera can be inputted into your computer so that 
+you can download and edit your pictures. 
 
 Now, a computer doesn't understand English or Japanese or any human language, a
 computer only understands 1s and 0s, or bits (bit = binary digit). When we write
@@ -61,12 +67,12 @@ problem.
 ## an example program
 Let's dive in and start writing a simple program. For the purposes of this
 introduction we will be using the C++ programming language, a powerful,
-general-purpose programming language widely used in practice today. 
+general-purpose language widely used in practice today. 
 
 ### functions
 A program is made of many tiny units we call functions. A program function is
-conceptually the same as a mathematical function. Take y = f(x) as an example. 
-The function f takes as input a value, x, and returns a different value, y. 
+conceptually the same as a mathematical function. Take `y = f(x)` as an example. 
+The function `f` takes as input a value, `x`, and returns a different value, `y`. 
 Let's take a look at an example function in C++.
 ```c++
 int doubleValue(int x) 
@@ -76,27 +82,27 @@ int doubleValue(int x)
 }
 ```
 The first line is declaring a function named doubleValue, which takes in an
-integer value we're calling x and returns another integer value (int stands for
-integer). As you can guess, this function's purpose is to double the value given
-and return its result. The second line is an open curly bracket used to indicate
-the start of the function body. The body of the function is where we perform all
-the *hard work*. Within the body we have lines of code, separated by semi-colons
-(;), executing code to fulfill the functions purpose.  The third line declares a
-new variable y, which is assigned the value of x multiplied by 2. The last
-statement of the body is typically a return statement, which outputs (returns)
-the result of all of our *hard work*.  Finally, we have a close curly bracket,
-indicating the end of the body, and the end of this function.
+integer value we're calling `x` and returns another integer value (`int` stands
+for integer). As you can guess, this function's purpose is to double the value
+given and return its result. The second line is an open curly bracket (`{`) used
+to indicate the start of the function body. The body of the function is where we
+perform all the *hard work*. Within the body we have lines of code, separated by
+semi-colons (;), executing code to fulfill the functions purpose.  The third
+line declares a new variable y, which is assigned the value of x multiplied by
+2. The last statement of the body is typically a return statement, which outputs
+(returns) the result of all of our *hard work*.  Finally, we have a close curly
+bracket (`}`) indicating the end of the body, thus the end of this function.
 
 ### the main function
-There is special function that is required in all C++ programs - the *main*
-function. The *main* function is the first function that is executed when
+There is special function that is required in all C++ programs - the `main`
+function. The `main` function is the first function that is executed when
 running your program; you can think of it as the entry point to the program. We
 will see usage of the main function in our first example program below. 
 
 ### hello, world! <a name="hello-world"></a>
 In the programming universe, when introducing a language the typical first
 exercise to write is the "hello, world!" program. In an effort to follow this
-tradition, we will now tackle writing "hello, world!" in C++! 
+tradition, we will now breakdown a simple "hello, world!" program.
 ```c++
 #include <iostream>
 
@@ -108,33 +114,66 @@ int main()
   return 0;
 }
 ```
-Let's again break this down line by line. The first line is what is known as an
+Let's break this down line by line. The first line is what is known as an
 include statement. An include statement's purpose is to allow usage of functions
 in an already written program (or library) in the program you are writing. In
 this particular case we are importing iostream, a piece of the C++ standard
 library that provides input/output stream functionality.
 
-For simplicity purposes we will skip the second line of code, "using namespace
-std;". Don't worry, we will come back to this later. 
+For simplicity purposes we will skip the second line of code, `using namespace
+std;`. Don't worry, we will come back to this later. 
 
 The rest of this program should look somewhat familiar to you as it declares a
 function, specifically, the main function. The main function returns an integer
 and does not take any arguments as input. Within the function body we are
-calling a utility in the iostream library, `cout`. The two less than operators
+calling a utility in the `iostream` library, `cout`. The two less than operators
 (`<<`) is referred to as the stream operator, which connects a stream of 
 sequences together. In this example we are creating a sequence of the "hello,
-world" phrase, followed by a new line character (`endl`). 
+world!" phrase, followed by a new line character (`endl`). 
 
 When this program is run we will see the following on our screen:
 ```
 hello, world!
 ```
 
-### compilation
-[TODO]
+### compilation and execution
+C++, like many languages, is a compiled language. This means that before our
+computer can execute our program it needs to be compiled using a compiler. The
+act of compilation is simply translating the C++ code into what we call machine
+code - a language that the computer can understand (remember, a computer only
+understands bits, not C++ code). Each type of computer understands different
+machine code instructions, thus depending on the target machine we want to run our
+program on, the correct compiler must be used.
 
-### running our program
-[TODO]
+Let's try and compile our C++ "hello, world!" program. We will be using the GNU
+GCC compiler (g++) to compile our program. To perform the compilation, we will
+run the following command in our command line interface terminal. 
+```
+$ g++ hello_world.cpp -o hello_world
+```
+The `$` symbol is our command line prompt; it appears when the computer is ready
+to accept a command to perform. As stated, the command we are running is `g++`,
+the GNU C++ compiler. We specify the source code file with the code we wrote,
+which is `hello_world.cpp`. `cpp` is the typical file extension for a C++ source
+code file. `-o` stands for output, which is specifying an option to the `g++`
+command that the resulting executable file will be called `hello_world`. After
+pressing enter, the command prompt (`$`) will show up again, which means you've
+officially compiled your first program, awesome!
+
+If you list the contents of the directory, using the `ls` command, you will see
+we now have two files - our source code file, and our executable file.
+```
+$ ls
+hello_world
+hello_world.cpp
+```
+You can run the executable by entering the following:
+```
+$ ./hello_world
+hello, world!
+```
+Congratulations, you have officially executed your first computer program! Great
+job! :D
 
 ## variables and types
 [TODO]
@@ -165,7 +204,9 @@ These are both valid in the C++ language. However, as you can tell, our first
 implementation of doubleValue is much more readable. This is why style is
 important, you always want to make sure your programs are easy to read, because
 you never know who is going to be reading them. There is no restriction on
-style, however, it is best to adhere to community guidelines and to keep things
-consistent. My general style rules in programming are: 1) "be consistent!", 
-2) "optimize for the reader, not the writer!".
+style, however, it is best to adhere to community guidelines and best practices.
+My general style rules in programming are: 1) "above all, be consistent", 
+2) "optimize for the reader, not the writer".
 
+### comments
+[TODO]
