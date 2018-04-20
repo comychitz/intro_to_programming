@@ -1,12 +1,13 @@
 # introduction to programming
 A brief introduction to computer programming.
 
-## about this tutorial
+# about this tutorial
 This introduction to programming is for anybody interested in learning how to
 code. I give a brief introduction to programming using C++ along with some basic
 computer-related knowledge.
 
-## table of contents
+# table of contents
+* [part one](#part-one)
   * [about this tutorial](#about-this-tutorial)
   * [what is programming?](#what-is-programming)
   * [an example program](#an-example-program)
@@ -15,11 +16,12 @@ computer-related knowledge.
     * [hello, world!](#hello-world)
     * [compilation and execution](#compilation-and-execution)
   * [variables and types](#variables-and-types)
-    * [namespaces](#namespaces)
   * [best practices](#best-practices)
     * [coding style](#coding-style)
     * [comments](#comments)
+* [part two](#part-two)
 
+# part one
 ## what is programming? <a name="what-is-programming"></a>
 Before we talk about what programming is, we need to understand what a computer
 is. Computers are programmable machines. In other words, they are machines that
@@ -81,7 +83,7 @@ int doubleValue(int x)
   return y;
 }
 ```
-The first line is declaring a function named doubleValue, which takes in an
+The first line is declaring a function named `doubleValue`, which takes in an
 integer value we're calling `x` and returns another integer value (`int` stands
 for integer). As you can guess, this function's purpose is to double the value
 given and return its result. The second line is an open curly bracket (`{`) used
@@ -175,33 +177,50 @@ hello, world!
 Congratulations, you have officially executed your first computer program! Great
 job! :D
 
-## variables and types
-[TODO]
+<b>NOTE</b>: If you are using an Integrated Development Environment (IDE), such as
+Microsoft Visual Studio, the above steps won't be needed as the IDE typically
+will provide this functionality in an easy one-click button. So if you are using
+an IDE, no need to worry about compiling your code via the command line
+interface.
 
-### namespaces
+## variables and types
+Programming in C++ primarily consists of creating variables and manipulating
+them to get the desired end result or state. Each variable has a type associated
+with it; for example, the variable `y` in our `doubleValue` function is of type
+`int`. Each type has its own rules and functions that it supports.  The integer
+type (`int`) supports the expected mathematical operations such as addition,
+subtraction, multiplication and so on. It can only be operated on  using other
+integer variables or values. The `int` type is a basic type that is included in
+the C++ language by default. Types such as `int` are what we refer to as
+*primitive types*.
+
+One powerful tool that C++ offers is the ability to create custom types. For
+example, if we need to create a `dog` type that has functions such as `bark`,
+`eat`, `sleep`, etc. we are able to do that. In C++ this is achieved through the
+creation of a `class`. We will dive more into classes later in this tutorial.
 
 ## best practices 
+Let's quickly overview some best practices in programming.
 
 ### coding style
 Even though it is quite early in your programming endeavors, it is well worth
 quickly talking about coding style. In the C++ programming language there is no
 restriction on how the code is organized in regards to white spaces. For
-example, we could write our doubleValue function in the following ways:
+example, we could write our `doubleValue` function in the following ways:
 ```c++
-int doubleValue(int x){ int y = x*2; return y; }
+int doubleValue(int x){int y = x*2;return y;}
 ```
 or
 ```c++
 int 
-doubleValue(int x)
-{
-int y = 
+doubleValue
+(int x)
+{int y = 
 x*2;
-return y;
-}
+return y;}
 ```
-These are both valid in the C++ language. However, as you can tell, our first
-implementation of doubleValue is much more readable. This is why style is
+These are both valid in the C++ language. However, as you can see, our first
+implementation of `doubleValue` is much more readable. This is why style is
 important, you always want to make sure your programs are easy to read, because
 you never know who is going to be reading them. There is no restriction on
 style, however, it is best to adhere to community guidelines and best practices.
@@ -209,4 +228,36 @@ My general style rules in programming are: 1) "above all, be consistent",
 2) "optimize for the reader, not the writer".
 
 ### comments
+In C++, and in most programming languages, there is the ability to add notes in
+the code to explain or annotate the code. These notes, which are referred to as
+comments, are ignored by the compiler, but offer to the programmers the ability
+to explain and document the code. 
+
+There are two types of comments that C++ supports, in-line comments (`//`) and
+block comments (`/* */`). In-line comments are comments that are meant to only
+span across the same line, while block comments can span multiple lines; denoted
+by the starting tag `/*` and ending where the next `*/` is found. 
+Comments are very useful for documenting the code and usually encouraged for
+documenting a function or a class' purpose. Let's look at what our `doubleValue`
+function would look like if it were commented.
+```c++
+/*
+ * Take an integer input and return its value doubled.
+ * @param x input value to double
+ * @return the result of doubling the input value
+ */
+int doubleValue(int x) 
+{
+  int y = x*2; // assign resulting variable before returning
+  return y; 
+}
+```
+
+This concludes part one of my introduction to programming. In this section we
+have learned the basics of a C++ program, how to write, compile and execute our
+code. Now let's really start to dig into the fun stuff! 
+
+
+# part two
 [TODO]
+
