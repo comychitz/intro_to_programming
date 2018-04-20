@@ -1,17 +1,6 @@
 # introduction to programming
 A brief introduction to computer programming.
 
-## table of contents
-   * [about this tutorial](#about-this-tutorial)
-   * [what is programming?](#what-is-programming?)
-   * [an example program](#an-example-program)
-       * [functions](#functions)
-       * [the main function](#the-main-function)
-       * [hello, world!](#hello,-world!)
-       * [compilation](#compilation)
-       * [running our program](#running-our-program)
-   * [best practices](best-practices)
-
 ## about this tutorial
 This introduction to programming is for anybody interested in learning how to
 code. I give a brief introduction to programming using C++ along with some basic
