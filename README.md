@@ -1,6 +1,11 @@
 # introduction to programming
 A brief introduction to computer programming.
 
+## about this tutorial
+This introduction to programming is for anybody interested in learning how to
+code. I give a brief introduction to programming using C++ along with some basic
+computer-related knowledge.
+
 ## table of contents
   * [about this tutorial](#about-this-tutorial)
   * [what is programming?](#what-is-programming)
@@ -13,11 +18,6 @@ A brief introduction to computer programming.
   * [variables and types](#variables-and-types)
     * [namespaces](#namespaces)
   * [best practices](#best-practices)
-
-## about this tutorial
-This introduction to programming is for anybody interested in learning how to
-code. I give a brief introduction to programming using C++ along with some basic
-computer-related knowledge.
 
 ## what is programming? <a name="what-is-programming"></a>
 Before we talk about what programming is, we need to understand what a computer
