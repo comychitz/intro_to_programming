@@ -1,14 +1,9 @@
 # introduction to programming
 A brief introduction to computer programming.
 
-# about this tutorial
-This introduction to programming is for anybody interested in learning how to
-code. I give a brief introduction to programming using C++ along with some basic
-computer-related knowledge.
-
 # table of contents
+* [about this tutorial](#about-this-tutorial)
 * [part one](#part-one)
-  * [about this tutorial](#about-this-tutorial)
   * [what is programming?](#what-is-programming)
   * [an example program](#an-example-program)
     * [functions](#functions)
@@ -20,6 +15,11 @@ computer-related knowledge.
     * [coding style](#coding-style)
     * [comments](#comments)
 * [part two](#part-two)
+
+# about this tutorial
+This introduction to programming is for anybody interested in learning how to
+code. I give a brief introduction to programming to get you quickly writing 
+and executing C++ code alongside some basic computer-related knowledge.
 
 # part one
 ## what is programming? <a name="what-is-programming"></a>
@@ -104,7 +104,7 @@ will see usage of the main function in our first example program below.
 ### hello, world! <a name="hello-world"></a>
 In the programming universe, when introducing a language the typical first
 exercise to write is the "hello, world!" program. In an effort to follow this
-tradition, we will now breakdown a simple "hello, world!" program.
+tradition, we will now decipher a simple "hello, world!" program.
 ```c++
 #include <iostream>
 
@@ -204,8 +204,8 @@ Let's quickly overview some best practices in programming.
 
 ### coding style
 Even though it is quite early in your programming endeavors, it is well worth
-quickly talking about coding style. In the C++ programming language there is no
-restriction on how the code is organized in regards to white spaces. For
+talking about coding style. In the C++ programming language there is no
+limitations on how the code is organized in regards to white spaces. For
 example, we could write our `doubleValue` function in the following ways:
 ```c++
 int doubleValue(int x){int y = x*2;return y;}
@@ -229,9 +229,9 @@ My general style rules in programming are: 1) "above all, be consistent",
 
 ### comments
 In C++, and in most programming languages, there is the ability to add notes in
-the code to explain or annotate the code. These notes, which are referred to as
-comments, are ignored by the compiler, but offer to the programmers the ability
-to explain and document the code. 
+the code. These brief notes, which are referred to as comments, are ignored by
+the compiler, but offer to the programmers the ability to explain and document
+the code. 
 
 There are two types of comments that C++ supports, in-line comments (`//`) and
 block comments (`/* */`). In-line comments are comments that are meant to only
@@ -239,7 +239,7 @@ span across the same line, while block comments can span multiple lines; denoted
 by the starting tag `/*` and ending where the next `*/` is found. 
 Comments are very useful for documenting the code and usually encouraged for
 documenting a function or a class' purpose. Let's look at what our `doubleValue`
-function would look like if it were commented.
+function would look like if it were documented with some comments.
 ```c++
 /*
  * Take an integer input and return its value doubled.
@@ -254,10 +254,11 @@ int doubleValue(int x)
 ```
 
 This concludes part one of my introduction to programming. In this section we
-have learned the basics of a C++ program, how to write, compile and execute our
-code. Now let's really start to dig into the fun stuff! 
+have learned the basics of a computer program, and how to write, compile and 
+execute C++ code. Now let's really start to dig into the fun stuff! 
 
 
 # part two
 [TODO]
+
 
