@@ -1,31 +1,43 @@
 # introduction to programming
 A brief introduction to computer programming.
 
+## table of contents
+    * [about this tutorial](#about-this-tutorial)
+    * [what is programming?](#what-is-programming?)
+    * [an example program](#an-example-program)
+        * [functions](#functions)
+        * [the main function](#the-main-function)
+        * [hello, world!](#hello,-world!)
+        * [compilation](#compilation)
+        * [running our program](#running-our-program)
+    * [best practices](best-practices)
+
+
 ## about this tutorial
 This introduction to programming is for anybody interested in learning how to
-code. I give a brief introduction of programming with the C++ language, along
-with some basic computer-related knowledge.
+code. I give a brief introduction to programming using C++ along with some basic
+computer-related knowledge.
 
 ## what is programming?
 Before we talk about what programming is, we need to understand what a computer
 is. Computers are programmable machines. In other words, they are machines that
 follow a set of instructions to do *something*. That *something* can be as
-simple as adding two numbers or as difficult as classifying a set of images and
-their contents. Computers come in all shapes and sizes, each having their own
-purpose and responsibilities. The computers we use everyday are general purpose
-computers, built to carry out everyday tasks such as writing documents, creating 
+simple as adding two numbers or as difficult as identifying objects within an
+image. Computers come in all shapes and sizes, each having their own purpose and
+responsibilities. The computers we use everyday are general purpose computers,
+built to carry out everyday tasks such as writing documents, creating
 presentations, accessing the internet, and so on. 
 
-There are three basic components that make a computer, the central processing 
+There are three basic components that make a computer, the central processing
 unit (CPU), memory, and input/output (I/O). The CPU is the brain of the
 computer, it is responsible for executing the instructions (programs) we tell it
 to perform. While it is executing these complex instructions, it needs to keep
 track of what it is doing, and that's where memory comes into play. A computer
-stores intermediate values (state) in memory to reference later, as needed.
-There are different types of memory, which we will not cover here. Lastly,
-there is I/O, which is how a computer interacts with the outside world. We
-humans typically interact with our computers (i.e. give input) via our mouse 
-and keyboard, which in turn causes output (i.e. text on the screen). 
+stores intermediate values (i.e. state) in memory to reference later, as needed.
+There are different types of memory, which we will touch on later. Lastly, there
+is I/O, which is how a computer interacts with the outside world. We humans
+generate input to our computers via our mouse and keyboard, which in turn causes
+output (ex. text on the screen). 
 
 Now, a computer doesn't understand English or Japanese or any human language, a
 computer only understands 1s and 0s, or bits (bit = binary digit). When we write
@@ -41,9 +53,9 @@ we have studied computers and made discoveries in this area, new programming
 languages have been developed to exploit new methods and paradigms of
 programming.
 
-So what is programming? There is much, much more to cover, but in simple terms
-programming is the act of writing a set of instructions (aka programs) for a
-computer to execute.
+So what is programming? Progamming is simply the act of writing a set of
+instructions for a computer to execute in an effort to perform a task or solve a
+problem.
 
 ## an example program
 Let's dive in and start writing a simple program. For the purposes of this
@@ -117,9 +129,18 @@ When this program is run we will see the following on our screen:
 hello, world!
 ```
 
-## variables and types
+### compilation
+[TODO]
 
-## coding style
+### running our program
+[TODO]
+
+## variables and types
+[TODO]
+
+## best practices 
+
+### coding style
 Even though it is quite early in your programming endeavors, it is well worth
 quickly talking about coding style. In the C++ programming language there is no
 restriction on how the code is organized in regards to white spaces. For
