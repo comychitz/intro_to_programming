@@ -1,12 +1,25 @@
 # introduction to programming
 A brief introduction to computer programming.
 
+## table of contents
+  * [about this tutorial](#about-this-tutorial)
+  * [what is programming?](#what-is-programming)
+  * [an example program](#an-example-program)
+    * [functions](#functions)
+    * [the main function](#the-main-function)
+    * [hello, world!](#hello-world)
+    * [compilation](#compilation)
+    * [running our program](#running-our-program)
+  * [variables and types](#variables-and-types)
+    * [namespaces](#namespaces)
+  * [best practices](#best-practices)
+
 ## about this tutorial
 This introduction to programming is for anybody interested in learning how to
 code. I give a brief introduction to programming using C++ along with some basic
 computer-related knowledge.
 
-## what is programming?
+## what is programming? <a name="what-is-programming"></a>
 Before we talk about what programming is, we need to understand what a computer
 is. Computers are programmable machines. In other words, they are machines that
 follow a set of instructions to do *something*. That *something* can be as
@@ -80,7 +93,7 @@ function. The *main* function is the first function that is executed when
 running your program; you can think of it as the entry point to the program. We
 will see usage of the main function in our first example program below. 
 
-### hello, world!
+### hello, world! <a name="hello-world"></a>
 In the programming universe, when introducing a language the typical first
 exercise to write is the "hello, world!" program. In an effort to follow this
 tradition, we will now tackle writing "hello, world!" in C++! 
@@ -125,6 +138,8 @@ hello, world!
 
 ## variables and types
 [TODO]
+
+### namespaces
 
 ## best practices 
 
