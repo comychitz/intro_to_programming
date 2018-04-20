@@ -55,13 +55,13 @@ A program is made of many tiny units we call functions. A program function is
 conceptually the same as a mathematical function. Take y = f(x) as an example. 
 The function f takes as input a value, x, and returns a different value, y. 
 Let's take a look at an example function in C++.
-````c++
+```c++
 int doubleValue(int x) 
 {
   int y = x*2;
   return y;
 }
-````
+```
 The first line is declaring a function named doubleValue, which takes in an
 integer value we're calling x and returns another integer value (int stands for
 integer). As you can guess, this function's purpose is to double the value given
@@ -107,18 +107,25 @@ std;". Don't worry, we will come back to this later.
 The rest of this program should look somewhat familiar to you as it declares a
 function, specifically, the main function. The main function returns an integer
 and does not take any arguments as input. Within the function body we are
-calling a utility in the iostream library, "cout". The two less than operators
-is referred to as the stream operator, which connects a stream of sequences. 
+calling a utility in the iostream library, `cout`. The two less than operators
+(`<<`) is referred to as the stream operator, which connects a stream of 
+sequences together. In this example we are creating a sequence of the "hello,
+world" phrase, followed by a new line character (`endl`). 
 
-### namespaces
+When this program is run we will see the following on our screen:
+```
+hello, world!
+```
 
-### coding style
+## variables and types
+
+## coding style
 Even though it is quite early in your programming endeavors, it is well worth
 quickly talking about coding style. In the C++ programming language there is no
 restriction on how the code is organized in regards to white spaces. For
 example, we could write our doubleValue function in the following ways:
 ```c++
-int doubleValue(int x) { int y = x*2; return y; }
+int doubleValue(int x){ int y = x*2; return y; }
 ```
 or
 ```c++
