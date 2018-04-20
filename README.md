@@ -1,6 +1,11 @@
 # introduction to programming
 A brief introduction to computer programming.
 
+## about this tutorial
+This introduction to programming is for anybody interested in learning how to
+code. I give a brief introduction of programming with the C++ language, along
+with some basic computer-related knowledge.
+
 ## what is programming?
 Before we talk about what programming is, we need to understand what a computer
 is. Computers are programmable machines. In other words, they are machines that
@@ -50,40 +55,62 @@ A program is made of many tiny units we call functions. A program function is
 conceptually the same as a mathematical function. Take y = f(x) as an example. 
 The function f takes as input a value, x, and returns a different value, y. 
 Let's take a look at an example function in C++.
-```c++
+````c++
 int doubleValue(int x) 
 {
   int y = x*2;
   return y;
 }
-```
-Let's take this line by line. The first line is declaring a function named
-doubleValue, which takes in an integer value we're calling x and returns another
-integer value (int stands for integer). As you can guess, this function's
-purpose is to double the value given and return its result. The second line is
-an open curly bracket used to indicate the start of the function body. The body
-of the function is where we perform all the *hard work*. Within the body we have
-lines of code, separated by semi-colons (;), executing code to fulfill the
-functions purpose.  The third line declares a new variable y, which is assigned
-the value of x multiplied by 2. The last statement of the body is typically a
-return statement, which outputs (returns) the result of all of our *hard work*.
-Finally, we have a close curly bracket, indicating the end of the body, and the
-end of this function.
+````
+The first line is declaring a function named doubleValue, which takes in an
+integer value we're calling x and returns another integer value (int stands for
+integer). As you can guess, this function's purpose is to double the value given
+and return its result. The second line is an open curly bracket used to indicate
+the start of the function body. The body of the function is where we perform all
+the *hard work*. Within the body we have lines of code, separated by semi-colons
+(;), executing code to fulfill the functions purpose.  The third line declares a
+new variable y, which is assigned the value of x multiplied by 2. The last
+statement of the body is typically a return statement, which outputs (returns)
+the result of all of our *hard work*.  Finally, we have a close curly bracket,
+indicating the end of the body, and the end of this function.
 
 ### the main function
+There is special function that is required in all C++ programs - the *main*
+function. The *main* function is the first function that is executed when
+running your program; you can think of it as the entry point to the program. We
+will see usage of the main function in our first example program below. 
 
-
+### hello, world!
+In the programming universe, when introducing a language the typical first
+exercise to write is the "hello, world!" program. In an effort to follow this
+tradition, we will now tackle writing "hello, world!" in C++! 
 ```c++
+#include <iostream>
+
+using namespace std;
+
 int main()
 {
-  int x = 3;
-  int y = doubleValue(x);
-
-  std::cout << "The value: " << x << " doubled is: " << y << std::endl;
-
+  cout << "hello, world!" << endl;
   return 0;
 }
 ```
+Let's again break this down line by line. The first line is what is known as an
+include statement. An include statement's purpose is to allow usage of functions
+in an already written program (or library) in the program you are writing. In
+this particular case we are importing iostream, a piece of the C++ standard
+library that provides input/output stream functionality.
+
+For simplicity purposes we will skip the second line of code, "using namespace
+std;". Don't worry, we will come back to this later. 
+
+The rest of this program should look somewhat familiar to you as it declares a
+function, specifically, the main function. The main function returns an integer
+and does not take any arguments as input. Within the function body we are
+calling a utility in the iostream library, "cout". The two less than operators
+is referred to as the stream operator, which connects a stream of sequences. 
+
+### namespaces
 
 ### coding style
 Even though it is quite early in your programming endeavors, it is well worth
