@@ -12,6 +12,7 @@ A brief introduction to computer programming.
     * [hello, world!](#hello-world)
     * [compilation and execution](#compilation-and-execution)
   * [variables and types](#variables-and-types)
+    * [common types](#common-types)
   * [best practices](#best-practices)
     * [coding style](#coding-style)
     * [comments](#comments)
@@ -99,11 +100,12 @@ for integer). As you can guess, this function's purpose is to double the value
 given and return its result. The second line is an open curly bracket (`{`) used
 to indicate the start of the function body. The body of the function is where we
 perform all the *hard work*. Within the body we have lines of code, separated by
-semi-colons (;), executing code to fulfill the functions purpose.  The third
-line declares a new variable y, which is assigned the value of x multiplied by
-2. The last statement of the body is typically a return statement, which outputs
-(returns) the result of all of our *hard work*.  Finally, we have a close curly
-bracket (`}`) indicating the end of the body, thus the end of this function.
+semi-colons (`;`), performing the tasks to fulfill the function's purpose.  The
+third line declares a new variable y, which is assigned the value of `x`
+multiplied by `2`. The last statement of the body is typically a return
+statement, which outputs (returns) the result of all of our *hard work*.
+Finally, we have a close curly bracket (`}`) indicating the end of the body,
+thus the end of this function.
 
 ### the main function
 There is special function that is required in all C++ programs - the `main`
@@ -129,7 +131,7 @@ int main()
 Let's break this down line by line. The first line is what is known as an
 include statement. An include statement's purpose is to allow usage of functions
 in an already written program (or library) in the program you are writing. In
-this particular case we are importing iostream, a piece of the C++ standard
+this particular case we are importing `iostream`, a piece of the C++ standard
 library that provides input/output stream functionality.
 
 For simplicity purposes we will skip the second line of code, `using namespace
@@ -155,7 +157,7 @@ act of compilation is simply translating the C++ code into what we call machine
 code - a language that the computer can understand (remember, a computer only
 understands bits, not C++ code). Each type of computer understands different
 machine code instructions, thus depending on the target machine we want to run our
-program on, the correct compiler must be used.
+program on the correct compiler must be used.
 
 Let's try and compile our C++ "hello, world!" program. We will be using the GNU
 GCC compiler (g++) to compile our program. To perform the compilation, we will
@@ -172,20 +174,11 @@ command that the resulting executable file will be called `hello_world`. After
 pressing enter, the command prompt (`$`) will show up again, which means you've
 officially compiled your first program, awesome!
 
-If you list the contents of the directory, using the `ls` command, you will see
-we now have two files - our source code file, and our executable file.
-```
-$ ls
-hello_world
-hello_world.cpp
-```
-You can run the executable by entering the following:
+We can run the executable by entering the following:
 ```
 $ ./hello_world
 hello, world!
 ```
-Congratulations, you have officially executed your first computer program! Great
-job! :D
 
 <b>NOTE</b>: If you are using an IDE, such as Microsoft Visual Studio, the above
 steps won't be needed as the IDE typically will provide this functionality in an
@@ -196,9 +189,9 @@ compiling your code via the command line interface.
 Programming in C++ primarily consists of creating variables and manipulating
 them to get the desired end result or state. Each variable has a type associated
 with it; for example, the variable `y` in our `doubleValue` function is of type
-`int`. Each type has its own rules and functions that it supports.  The integer
+`int`. Each type has its own rules and functions that it supports. The integer
 type (`int`) supports the expected mathematical operations such as addition,
-subtraction, multiplication and so on. It can only be operated on  using other
+subtraction, multiplication and so on. It can only be operated on using other
 integer variables or values. The `int` type is a basic type that is included in
 the C++ language by default. Types such as `int` are what we refer to as
 *primitive types*.
@@ -207,6 +200,9 @@ One powerful tool that C++ offers is the ability to create custom types. For
 example, if we need to create a `dog` type that has functions such as `bark`,
 `eat`, `sleep`, etc. we are able to do that. In C++ this is achieved through the
 creation of a `class`. We will dive more into classes later in this tutorial.
+
+### common types
+[TODO]
 
 ## best practices 
 Let's quickly overview some best practices in programming.
@@ -298,7 +294,7 @@ int main()
 This simple program asks the user to enter a value and prints to the user what
 they entered. The line `cin >> x;` is the key to this program. During execution
 of this program, it will pause at this line waiting for the user to enter an
-integer followed by the <return> key. This act of pausing and waiting for in
+integer followed by the `<return>` key. This act of pausing and waiting for in
 programming is referred to as *blocking*. We are *blocked* waiting for input
 from the user when `cin` is called.
 
@@ -309,20 +305,30 @@ $ ./read_input
 Enter a number:     
 ```
 At this point, the program is *blocked* waiting for you to enter a number. So,
-let's go ahead and input an integer and press the <return> key.
+let's go ahead and input an integer and press the `<return>` key.
 ```
 Enter a number: 5
 You entered: 5
 $
 ```
-Once you hit the return key, the `cin` function will assign the value you
+Once you hit the `<return>` key, the `cin` function will assign the value you
 entered into the variable `x`. Then, using the `cout` function, we print what
 was entered. 
 
 ## control statements
 [TODO]
+### if 
+[TODO]
+### switch
+[TODO]
 
 ## loops and arrays
+### arrays
+### while loop
+### do-while loop
+### break statement
+### for loop
+
 [TODO]
 
 ## exercises 1-5
