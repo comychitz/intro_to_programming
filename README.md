@@ -3,6 +3,7 @@ A brief introduction to computer programming.
 
 # table of contents
 * [about this tutorial](#about-this-tutorial)
+  * [prerequisites](#prerequisites)
 * [part one](#part-one)
   * [what is programming?](#what-is-programming)
   * [an example program](#an-example-program)
@@ -15,11 +16,20 @@ A brief introduction to computer programming.
     * [coding style](#coding-style)
     * [comments](#comments)
 * [part two](#part-two)
+  * [control statements](#control-statements)
+  * [loops and arrays](#loops-and-arrays)
 
 # about this tutorial
 This introduction to programming is for anybody interested in learning how to
 code. I give a brief introduction to programming to get you quickly writing 
 and executing C++ code alongside some basic computer-related knowledge.
+
+## prerequisites
+There are none! All you need to successfully complete this training is a working
+computer with a basic text editor and C++ compiler. Running the Linux (or Unix
+based, such as MacOS) operating system is preferred (but not required). If you
+have an Integrated Development Environment (IDE) you'd like to use instead, by
+all means feel free to use. 
 
 # part one
 ## what is programming? <a name="what-is-programming"></a>
@@ -177,11 +187,10 @@ hello, world!
 Congratulations, you have officially executed your first computer program! Great
 job! :D
 
-<b>NOTE</b>: If you are using an Integrated Development Environment (IDE), such as
-Microsoft Visual Studio, the above steps won't be needed as the IDE typically
-will provide this functionality in an easy one-click button. So if you are using
-an IDE, no need to worry about compiling your code via the command line
-interface.
+<b>NOTE</b>: If you are using an IDE, such as Microsoft Visual Studio, the above
+steps won't be needed as the IDE typically will provide this functionality in an
+easy one-click button. So if you are using an IDE, no need to worry about
+compiling your code via the command line interface.
 
 ## variables and types
 Programming in C++ primarily consists of creating variables and manipulating
@@ -257,8 +266,77 @@ This concludes part one of my introduction to programming. In this section we
 have learned the basics of a computer program, and how to write, compile and 
 execute C++ code. Now let's really start to dig into the fun stuff! 
 
-
 # part two
+## reading input
+Introducing input into our program is a common task in computer programming.
+Remember, a basic component of a computer is I/O - we give our machine some
+input and it generates some output. In more advanced programs this is typically
+accomplished via a graphical user interface (GUI), but for more simple programs
+the command line interface is used.
+
+The function `cin`, which is part of the `iostream` library, is what we will be
+using to introduce input to our programs. Think of `cin` as the opposite to
+`cout`; instead of an *output* stream, it is an *input* stream. Below is an
+example usage of `cin`. 
+```c++
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+  int x;
+
+  cout << "Enter a number: ";
+  cin >> x;
+
+  cout << "You entered: " << x << endl;
+
+  return 0;
+}
+```
+This simple program asks the user to enter a value and prints to the user what
+they entered. The line `cin >> x;` is the key to this program. During execution
+of this program, it will pause at this line waiting for the user to enter an
+integer followed by the <return> key. This act of pausing and waiting for in
+programming is referred to as *blocking*. We are *blocked* waiting for input
+from the user when `cin` is called.
+
+Now let's compile and run this program.
+```
+$ g++ read_input.cpp -o read_input
+$ ./read_input 
+Enter a number:     
+```
+At this point, the program is *blocked* waiting for you to enter a number. So,
+let's go ahead and input an integer and press the <return> key.
+```
+Enter a number: 5
+You entered: 5
+$
+```
+Once you hit the return key, the `cin` function will assign the value you
+entered into the variable `x`. Then, using the `cout` function, we print what
+was entered. 
+
+## control statements
+[TODO]
+
+## loops and arrays
+[TODO]
+
+## exercises 1-5
+Now that you have some basic programming knowlege, it is time to tackle some
+exercises to put what you've learned to practice. Within the `exercises` folder I
+encourage you to try and write programs 1 through 5. There are example solutions
+within the `exercises/solutions` folder, but try not to peek until you have
+attempted your own solution. Good luck!
+
+
+# part three
+[TODO]
+
+## classes
 [TODO]
 
 
