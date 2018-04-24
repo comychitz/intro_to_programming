@@ -187,21 +187,23 @@ compiling your code via the command line interface.
 
 ## variables and types
 Programming in C++ primarily consists of creating variables and manipulating
-them to get the desired end result or state. Each variable has a type associated
-with it; for example, the variable `y` in our `doubleValue` function is of type
-`int`. Each type has its own rules and functions that it supports. The integer
-type (`int`) supports the expected mathematical operations such as addition,
-subtraction, multiplication and so on. It can only be operated on using other
-integer variables or values. The `int` type is a basic type that is included in
-the C++ language by default. Types such as `int` are what we refer to as
-*primitive types*.
+them to achieve the desired end state or result. Each variable has a type
+associated with it; for example, the variable `y` in our `doubleValue` function
+is of type `int`. Each type has its own rules and functions that it supports.
+The integer type (`int`) supports the expected mathematical operations such as
+addition, subtraction, multiplication and so on. It can only be operated on
+using other integer variables or values. The `int` type is a basic type that is
+included in the C++ language by default. Types such as `int` are what we refer
+to as *primitive types*.
 
 One powerful tool that C++ offers is the ability to create custom types. For
 example, if we need to create a `dog` type that has functions such as `bark`,
-`eat`, `sleep`, etc. we are able to do that. In C++ this is achieved through the
-creation of a `class`. We will dive more into classes later in this tutorial.
+`eat`, `sleep`, etc., we are able to do that. In C++ this is achieved through 
+the creation of a `class`. We will dive more into classes later in this 
+tutorial.
 
 ### common types
+
 [TODO]
 
 ## best practices 
@@ -332,7 +334,7 @@ if(/* some condition is met */)
   // do something...
 }
 ```
-Now, if we wanted to react different when the condition is not met, we can
+Now, if we wanted to react differently when the condition is not met, we can
 introduce an `else` clause to our if statement.
 ```c++
 if(/* some condition is met */)
@@ -347,8 +349,8 @@ else
 Having an `else` clause is not necessary and only used when needed. However, you
 cannot have an `else` clause without a preceding if. 
 
-In the case that you have two specific conditions that can be met, you can use
-an `else if` clause. 
+In the case that you have two (or more) specific conditions that can be met, you
+can use an `else if` clause. 
 ```c++
 if(/* some condition is met */)
 {
@@ -362,6 +364,11 @@ else
 {
   // do something else...
 }
+```
+Just like an `else` clause, you cannot have an `else if` clause without a
+preceeding `if`. Moreover, when using `else if` clauses, you must make sure that
+it doesn't succeed an `else` statement. In otherwords, `else` must always be
+last.
 
 ### switch
 [TODO]
