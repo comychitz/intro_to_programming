@@ -203,8 +203,18 @@ the creation of a `class`. We will dive more into classes later in this
 tutorial.
 
 ### common types
-
-[TODO]
+The table below outlines some common types used in C++. It gives a brief
+description, examples, and states the library it is defined in. Remember,
+primitive types are part of the standard language and don't belong to any
+supporting library. 
+| Type | Library | Description | Example |
+| --- | --- | --- | --- |
+| bool | primitive | Boolean type ("true" or "false") | `bool b = true` |
+| char | primitive | A single character | `char c = 'a';`|
+| int | primitive | An integer value | `int x = 5;` |
+| float | primitive | A floating point number | `double x = 1.234;` |
+| string | `<string>` | A sequence of characters | `string c = "hello, world!";` |
+| vector | `<vector>` | A sequence of a specific type | `vector<int> integers = {1, 4, 8, 9};` |
 
 ## best practices 
 Let's quickly overview some best practices in programming.
@@ -375,10 +385,10 @@ last.
 
 ## loops and arrays
 ### arrays
+### for loop
 ### while loop
 ### do-while loop
 ### break statement
-### for loop
 [TODO]
 
 ## scope
@@ -386,18 +396,25 @@ last.
 
 ## exercises 1-5
 Now that you have some basic programming knowlege, it is time to tackle some
-exercises to put what you've learned to practice. Within the `exercises` folder I
-encourage you to try and write programs 1 through 5. There are example solutions
-within the `exercises/solutions` folder, but try not to peek until you have
-attempted your own solution. Good luck!
-
+exercises to put what you've learned to the test. Within the `exercises` folder 
+I encourage you to try and write programs 1 through 5. There are example 
+solutions within the `exercises/solutions` folder, but try not to peek until 
+you have attempted your own solution. Good luck!
 
 # part three
-[TODO]
-
 ## complex controls statements
 [TODO]
 
-## bitwise operators
+## bits and sizes
 [TODO]
 
+# part four
+## data structures
+[TODO]
+
+## algorithms
+[TODO]
+
+# part five
+## classes
+[TODO]
