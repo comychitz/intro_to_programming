@@ -207,6 +207,7 @@ The table below outlines some common types used in C++. It gives a brief
 description, examples, and states the library it is defined in. Remember,
 primitive types are part of the standard language and don't belong to any
 supporting library. 
+
 | Type | Library | Description | Example |
 | --- | --- | --- | --- |
 | bool | primitive | Boolean type ("true" or "false") | `bool b = true` |
