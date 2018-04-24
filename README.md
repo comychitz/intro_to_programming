@@ -316,9 +316,53 @@ entered into the variable `x`. Then, using the `cout` function, we print what
 was entered. 
 
 ## control statements
-[TODO]
+Control statements are a powerful tool in programming. These type of statements
+allow a programmer to determine which portion of their code to execute during
+execution. Typically control statements are used when we are reacting to input
+or when reacting to a specific event. 
+
 ### if 
-[TODO]
+The `if` statement is the most common, and argueably the most powerful, control
+statement in programming. This allows a programmer to say: *if* certain input
+meets some criteria run this sequence of code, *else* run a different sequence
+of code. The structure of an `if` statement is shown below.
+```c++
+if(/* some condition is met */)
+{
+  // do something...
+}
+```
+Now, if we wanted to react different when the condition is not met, we can
+introduce an `else` clause to our if statement.
+```c++
+if(/* some condition is met */)
+{
+  // do something...
+}
+else
+{
+  // do something else...
+}
+```
+Having an `else` clause is not necessary and only used when needed. However, you
+cannot have an `else` clause without a preceding if. 
+
+In the case that you have two specific conditions that can be met, you can use
+an `else if` clause. 
+```c++
+if(/* some condition is met */)
+{
+  // do something...
+}
+else if(/* some other condition is met */)
+{
+  // do something different...
+}
+else
+{
+  // do something else...
+}
+
 ### switch
 [TODO]
 
@@ -328,7 +372,9 @@ was entered.
 ### do-while loop
 ### break statement
 ### for loop
+[TODO]
 
+## scope
 [TODO]
 
 ## exercises 1-5
@@ -342,7 +388,9 @@ attempted your own solution. Good luck!
 # part three
 [TODO]
 
-## classes
+## complex controls statements
 [TODO]
 
+## bitwise operators
+[TODO]
 
