@@ -17,6 +17,7 @@ A brief introduction to computer programming.
     * [coding style](#coding-style)
     * [comments](#comments)
 * [part two](#part-two)
+  * [reading input](#reading-input)
   * [control statements](#control-statements)
   * [loops and arrays](#loops-and-arrays)
 
