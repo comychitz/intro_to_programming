@@ -108,7 +108,7 @@ statement, which outputs (returns) the result of all of our *hard work*.
 Finally, we have a close curly bracket (`}`) indicating the end of the body,
 thus the end of this function.
 
-Now, when we want to use this function, or *call* this rfunction, we can write 
+Now, when we want to use this function, or *call* this function, we can write 
 the following:
 ```c++
 int y = doubleValue(2);
