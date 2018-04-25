@@ -108,11 +108,21 @@ statement, which outputs (returns) the result of all of our *hard work*.
 Finally, we have a close curly bracket (`}`) indicating the end of the body,
 thus the end of this function.
 
+Now, when we want to use this function, or *call* this rfunction, we can write 
+the following:
+```c++
+int y = doubleValue(2);
+```
+In this line of code we have *called* the `doubleValue` function and assigned 
+the return value (4, in this case) to an integer variable named `y`. We will
+talk more about variables and *assignment* more in detail later.
+
 ### the main function
 There is special function that is required in all C++ programs - the `main`
 function. The `main` function is the first function that is executed when
-running your program; you can think of it as the entry point to the program. We
-will see usage of the main function in our first example program below. 
+running your program; you can think of it as the entry point to the program. 
+The main function is never called in your program, that is because your
+computer will call it when it runs your program.
 
 ### hello, world! <a name="hello-world"></a>
 In the programming universe, when introducing a language the typical first
@@ -383,6 +393,9 @@ it doesn't succeed an `else` statement. In otherwords, `else` must always be
 last.
 
 ### switch
+[TODO]
+
+### comparison operators
 [TODO]
 
 ## loops and arrays
