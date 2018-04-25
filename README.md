@@ -181,9 +181,9 @@ to accept a command to perform. As stated, the command we are running is `g++`,
 the GNU C++ compiler. We specify the source code file with the code we wrote,
 which is `hello_world.cpp`. `cpp` is the typical file extension for a C++ source
 code file. `-o` stands for output, which is specifying an option to the `g++`
-command that the resulting executable file will be called `hello_world`. After
-pressing enter, the command prompt (`$`) will show up again, which means you've
-officially compiled your first program, awesome!
+command that the resulting executable (or binary) file will be called 
+`hello_world`. After pressing enter, the command prompt (`$`) will show up 
+again, which means you've officially compiled your first program, awesome!
 
 We can run the executable by entering the following:
 ```
