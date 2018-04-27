@@ -392,11 +392,27 @@ preceeding `if`. Moreover, when using `else if` clauses, you must make sure that
 it doesn't succeed an `else` statement. In otherwords, `else` must always be
 last.
 
-### switch
-[TODO]
-
 ### comparison operators
-[TODO]
+To test if some condition is met in our `if` statements we use comparison 
+(relational) operators. For example, to check if an integer variable `x` equals
+the value `5` we would write:
+```c++
+if(x == 5)
+{
+  /* do something when x equals 5... */
+}
+```
+The table below outlines the comparison operators:
+
+| Name | Syntax | Example |
+| --- | --- | --- |
+| equal to | `==` | `x == 5` |
+| not equal to | `!=` | `y != 3` |
+| less than | `<` | `y < x` |
+| less than or equal to | `<=` | `a <= b` |
+| greater than | `>` | `y > x` |
+| greater than or equal to | `>=` | `y > x` |
+
 
 ## loops and arrays
 ### arrays
@@ -417,9 +433,6 @@ solutions within the `exercises/solutions` folder, but try not to peek until
 you have attempted your own solution. Good luck!
 
 # part three
-## complex controls statements
-[TODO]
-
 ## bits and sizes
 [TODO]
 
