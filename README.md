@@ -24,11 +24,11 @@ A brief introduction to computer programming.
 # about this tutorial
 This introduction to programming is for anybody interested in learning how to
 code. I give a brief introduction to programming to get you quickly writing 
-and executing C++ code alongside some basic computer-related knowledge.
+and executing C++ code.
 
 ## prerequisites
 There are none! All you need to successfully complete this training is a working
-computer with a basic text editor and C++ compiler. Running the Linux (or Unix
+computer with a basic text editor and C++ compiler. Running a Linux (or Unix
 based, such as MacOS) operating system is preferred (but not required). If you
 have an Integrated Development Environment (IDE) you'd like to use instead, by
 all means feel free to use. 
@@ -318,9 +318,8 @@ int main()
 This simple program asks the user to enter a value and prints to the user what
 they entered. The line `cin >> x;` is the key to this program. During execution
 of this program, it will pause at this line waiting for the user to enter an
-integer followed by the `<return>` key. This act of pausing and waiting for in
-programming is referred to as *blocking*. We are *blocked* waiting for input
-from the user when `cin` is called.
+integer followed by the `<return>` key. This act of pausing and waiting for an
+event in programming is referred to as *blocking*.
 
 Now let's compile and run this program.
 ```
@@ -424,17 +423,23 @@ Arrays are sequences of a certain type. For example, if we are looking to keep
 track of 5 integer values, we would declare an integer array and store data
 into it. For example, `int a[5];` declares an array of 5 integers named `a`. 
 Arrays are fixed in size and order after they are declared, however, each
-element can be assigned as needed. 
+element can be assigned as needed. It may help to think of arrays as a simple
+single-row table.
+
+```c++
+int a[5] = {3, 9, 1, 8, 2}; // declares and initializes int array named a
+```
+|---|---|---|---|---|
+| 3 | 9 | 1 | 8 | 2 |
 
 <b>Arrays are zero-based(!)</b> In other words, when we want to update
-the first array element, we use the zeroth index. Continuing with our integer
-array example, we would assign the first integer in the array by writing the
-following: `a[0] = 5;` To assign the second element we would write `a[1] = 1;`
-and so on.
+the first array element, we use the zeroth index.  We can assign the first 
+integer in the array by writing `a[0] = 3;`. To assign the second element we 
+would write `a[1] = 1;` and so on.
 
-*NOTE: If you attempt to access an element out of the array's bounds, your
+<b>NOTE:</b> *If you attempt to access an element out of the array's bounds, your
 program is going to crash! Remember, an array has a limited size when declaring
-it, so you must always adhere to it*
+it, so you must always adhere to it.*
 
 Arrays also have dimensions. So far we have seen one dimensional arrays such as 
 `int x[5]`. However, we can have multiple dimensions, such as a two dimensional
