@@ -356,6 +356,10 @@ if(/* some condition is met */)
   // do something...
 }
 ```
+Within the parentheses we enter a *predicate* statement. In programming, a
+*predicate* statement is an expression that generates a boolean (true or false)
+result. We will see some examples shortly.
+
 Now, if we wanted to react differently when the condition is not met, we can
 introduce an `else` clause to our if statement.
 ```c++
@@ -399,7 +403,7 @@ the value `5` we would write:
 ```c++
 if(x == 5)
 {
-  /* do something when x equals 5... */
+  /* do something special when x equals 5... */
 }
 ```
 The table below outlines the comparison operators:
@@ -416,13 +420,95 @@ The table below outlines the comparison operators:
 
 ## loops and arrays
 ### arrays
-### for loop
-### while loop
-### do-while loop
-### break statement
-[TODO]
+Arrays are sequences of a certain type. For example, if we are looking to keep
+track of 5 integer values, we would declare an integer array and store data
+into it. For example, `int a[5];` declares an array of 5 integers named `a`. 
+Arrays are fixed in size and order after they are declared, however, each
+element can be assigned as needed. 
 
-## scope
+<b>Arrays are zero-based(!)</b> In other words, when we want to update
+the first array element, we use the zeroth index. Continuing with our integer
+array example, we would assign the first integer in the array by writing the
+following: `a[0] = 5;` To assign the second element we would write `a[1] = 1;`
+and so on.
+
+*NOTE: If you attempt to access an element out of the array's bounds, your
+program is going to crash! Remember, an array has a limited size when declaring
+it, so you must always adhere to it*
+
+Arrays also have dimensions. So far we have seen one dimensional arrays such as 
+`int x[5]`. However, we can have multiple dimensions, such as a two dimensional
+array that is commonly used to represent a table or matrix. A simple example of
+a two dimenional integer array can be written as `int x[5][5];`.
+
+### for loop
+Often in computer programming the same task needs to be performed on a different
+piece of data (i.e. different element in an array).  Here's a typical problem:
+print out all the contents of an array. Simple, right? But you wouldn't want to 
+write code that individually accesses each element of a 1000 element array
+because that would be very tedious and inefficient. Instead, we would write a
+`for` loop.
+
+Let's break down a simple `for` loop example:
+```c++
+void printArray(int a[], int size)
+{
+  for(int i = 0; i < size; i=i+1)
+  {
+    cout << "Index " << i << " has value: " << a[i] << endl;
+  }
+}
+
+int main()
+{
+  int a[5] = {1, 8, 4, 2, 9};
+
+  printArray(a, 5);
+
+  return 0;
+}
+```
+In this program, we have defined a function named `printArray` that takes an
+array and its size as input arguments. The return type for this function is
+something we have yet to see, `void`. The `void` keyword is used when a function
+doesn't have any value to return, which is the case for our `printArray`
+function - its job is to simply print out the contents of the array to the
+screen. The function then declares a `for` loop to print out the contents of 
+the array.
+
+Within the parentheses after the `for` keyword we have three sections, separated
+by semi-colons (`;`). The first is the *init* step, which is executed only once
+at the beginning of the loop. The second is the *condition* statement, which is
+a *predicate* expression that constitutes if the loop should exit or not. If
+this expression is true, the loop continues to run; if not, the loop will exit.
+The last section is the *increment* section, typically used to increment the
+value using in the *condition* statement. In our example above the variable `i`
+is used to keep track of which index of the array we are accessing, which is
+initialized in the *init* step and incremented afer each iteration of the for
+loop.
+
+For loops, like functions, have a body. The body of the loop is executed until
+the loop exits (the condition is no longer satisfied). Variables that are
+declared within the loop only are alive within the loop's body (more on this in
+the [scope](#scope) section).
+```c++
+for(/* init */; /* condition */; /* increment */) 
+{
+  /* body of for loop */
+}
+```
+The result of running the above program will print out the following:
+```
+Index 0 has value: 1
+Index 1 has value: 8
+Index 2 has value: 4
+Index 3 has value: 2
+Index 4 has value: 9
+```
+
+### while loop
+
+### break statement
 [TODO]
 
 ## exercises 1-5
@@ -433,6 +519,9 @@ solutions within the `exercises/solutions` folder, but try not to peek until
 you have attempted your own solution. Good luck!
 
 # part three
+## scope
+[TODO]
+
 ## bits and sizes
 [TODO]
 
