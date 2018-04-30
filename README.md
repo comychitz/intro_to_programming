@@ -432,6 +432,7 @@ single-row table.
 ```c++
 int a[5] = {3, 9, 1, 8, 2}; // declares and initializes int array named a
 ```
+
 |---|---|---|---|---|
 | 3 | 9 | 1 | 8 | 2 |
 
