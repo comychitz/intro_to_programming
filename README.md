@@ -25,7 +25,7 @@ A brief introduction to computer programming.
     * [while loop](#while-loop)
     * [infinite loop](#infinite-loop)
     * [break statement](#break-statement)
-  * [exercise 1-5](#exercises-1-5)
+  * [exercises](#exercises-1-5)
 * [part three](#part-three)
   * Under construction...
 * [part four](#part-four)
