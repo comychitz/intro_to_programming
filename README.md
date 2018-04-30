@@ -228,6 +228,9 @@ supporting library.
 | string | `<string>` | A sequence of characters | `string c = "hello, world!";` |
 | vector | `<vector>` | A sequence of a specific type | `vector<int> integers = {1, 4, 8, 9};` |
 
+## scope
+[TODO]
+
 ## best practices 
 Let's quickly overview some best practices in programming.
 
@@ -511,32 +514,88 @@ Index 3 has value: 2
 Index 4 has value: 9
 ```
 
-### while loop
-
-### break statement
+### nested loops
 [TODO]
 
+### while loop
+There are a few types of loops in C++. We have seen the `for` loop, now let's
+talk about the `while` loop, which is very similar. A `while` loop only contains
+a *condition* statement within its parentheses. Here's the format:
+```c++
+while(/* some condition */)
+{
+  // do work here
+}
+```
+The `for` loop that we wrote above for printing out the contents of array `a` 
+can be written as the following.
+```c++
+int i = 0;
+while(i < 5)
+{
+  cout << "Index " << i << " has value: " << a[i] << endl;
+  i++; // shorthand notation for i=i+1
+}
+```
+
+### infinite loop
+In computer programming there is many times the desire to "loop forever",
+performing the same task endlessly. A typical example could be the program that
+controls the mouse of your computer - it is an infinite loop that waits for you
+to move your mouse (physically) and responds by moving the cursor on your
+screen. 
+
+We can write infinite loops with both for `for` and `while` loop expressions.
+Examples of each are shown below.
+```c++
+while(true)
+{
+  // do work here
+}
+```
+```c++
+for(;;)
+{
+  // do work here
+}
+```
+
+### break statement
+Now, imagine you needed to exit your infinite loop for some reason - a critical
+error occured or a signal was received to shutdown your program - how would you
+exit an infinite loop? Well, in C++ there is the `break` statement, which is
+used to immediately exit from the current loop. 
+```c++
+while(true)
+{
+  // do work here
+
+  if(/* some critical/final condition */)
+  {
+    break;
+  }
+}
+```
+<b>NOTE:</b> A `break` statement only exits the inner-most loop that it is 
+called in. So if you had two nested loops, you would need two `break` statements
+to exit out of the outer-most loop.
+
 ## exercises 1-5
-Now that you have some basic programming knowlege, it is time to tackle some
+Now that you have some basic programming knowledge, it is time to tackle some
 exercises to put what you've learned to the test. Within the `exercises` folder 
 I encourage you to try and write programs 1 through 5. There are example 
 solutions within the `exercises/solutions` folder, but try not to peek until 
 you have attempted your own solution. Good luck!
 
 # part three
-## scope
-[TODO]
+Let's now talk about some programming theory.
 
-## bits and sizes
-[TODO]
-
-# part four
 ## data structures
 [TODO]
 
 ## algorithms
 [TODO]
 
-# part five
+# part four
 ## classes
 [TODO]
