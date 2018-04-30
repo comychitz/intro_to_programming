@@ -524,8 +524,7 @@ controls the mouse of your computer - it is an infinite loop that waits for you
 to move your mouse (physically) and responds by moving the cursor on your
 screen. 
 
-We can write infinite loops with both `for` and `while` loop expressions.  
-Examples of each are shown below.
+We can write infinite loops with both `for` and `while` loop expressions.
 ```c++
 while(true)
 {
