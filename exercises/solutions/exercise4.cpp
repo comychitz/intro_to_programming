@@ -21,7 +21,13 @@ int main()
                  5,5,7,3,1,
                  8,9,3,4,2};
 
-
+  for(int i = 0; i < 5; i++)
+  {
+    for(int j = 0; j < 5; j++)
+    {
+      cout << a[i][j] << endl;
+    }
+  }
 
   return 0;
 }

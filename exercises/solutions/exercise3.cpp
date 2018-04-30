@@ -13,9 +13,20 @@ using namespace std;
 
 int main()
 {
+  int a[5];
+
   // ask user to enter 5 numbers
+  for(int i = 0; i < 5; i++)
+  {
+    cout << "Enter a number: ";
+    cin >> a[i];
+  }
 
   // print numbers in reverse order
+  for(int i = 4; i >= 0; i--)
+  {
+    cout << a[i] << endl;
+  }
 
   return 0;
 }

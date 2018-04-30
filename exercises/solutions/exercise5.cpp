@@ -30,6 +30,22 @@ int generateRandom()
 
 int main()
 {
+  int randomNumber = generateRandom();
+
+  while(true)
+  {
+    int userGuess;
+    cout << "Guess a number between 1 and 10: ";
+    cin >> userGuess;
+
+    if(userGuess == randomNumber)
+    {
+      cout << "Wow, you're good!" << endl;
+      break;
+    }
+
+    cout << "Sorry, try again." << endl;
+  }
 
   return 0;
 }
