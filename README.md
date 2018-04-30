@@ -432,14 +432,14 @@ single-row table.
 ```c++
 int a[5] = {3, 9, 1, 8, 2}; // declares and initializes int array named a
 ```
-
-|---|---|---|---|---|
-| 3 | 9 | 1 | 8 | 2 |
+| Index | 0 | 1 | 2 | 3 | 4 |
+|---|---|---|---|---|---|
+| Contents | 3 | 9 | 1 | 8 | 2 |
 
 <b>Arrays are zero-based(!)</b> In other words, when we want to update
 the first array element, we use the zeroth index.  We can assign the first 
 integer in the array by writing `a[0] = 3;`. To assign the second element we 
-would write `a[1] = 1;` and so on.
+would write `a[1] = 9;` and so on.
 
 <b>NOTE:</b> *If you attempt to access an element out of the array's bounds, your
 program is going to crash! Remember, an array has a limited size when declaring
