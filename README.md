@@ -450,18 +450,18 @@ the array.
 Within the parentheses after the `for` keyword we have three sections, separated
 by semi-colons (`;`). The first is the *init* step, which is executed only once
 at the beginning of the loop. The second is the *condition* statement, which is
-a *predicate* expression that constitutes if the loop should exit or not. If
-this expression is true, the loop continues to run; if not, the loop will exit.
-The last section is the *increment* section, typically used to increment the
-value using in the *condition* statement. In our example above the variable `i`
+a *predicate* expression that constitutes if the loop should exit or not - it is
+evaluated at each loop iteration. If this expression is true, the loop continues
+to run; if not, the loop will exit. The last section is the *increment* section,
+typically used to increment the value defined in the *condition* statement. The
+increment section is run at the end of the loop, before coming back to the top
+and evaluating the *condition* once again. In our example above the variable `i`
 is used to keep track of which index of the array we are accessing, which is
-initialized in the *init* step and incremented afer each iteration of the for
-loop.
+initialized in the *init* step and incremented afer each iteration.
 
 For loops, like functions, have a body. The body of the loop is executed until
 the loop exits (the condition is no longer satisfied). Variables that are
-declared within the loop only are alive within the loop's body (more on this in
-the [scope](#scope) section).
+declared within the loop are within the loops *scope*.
 ```c++
 for(/* init */; /* condition */; /* increment */) 
 {
@@ -478,7 +478,23 @@ Index 4 has value: 9
 ```
 
 ### nested loops
-[TODO]
+It is often necessary to have loops within loops, what we refer to as *nested
+loops*. For example, if we have a two dimenional array, we would iterate over
+each element by writing the following:
+```c++
+int a[5][5];
+for(int i = 0; i < 5; i=i+1)
+{
+  for(int j = 0; j < 5; j=j+1)
+  {
+    cout << a[i][j] << endl; // print value at row i, column j of 2D array
+  }
+}
+```
+There are no limits to the number of loops you nest, however, it is best
+practice to limit the number of nested loops. Typically, the more loops you have
+nested, the less efficient your program will be. Moreover, it gets very
+difficult to read your program.
 
 ### while loop
 There are a few types of loops in C++. We have seen the `for` loop, now let's
