@@ -13,13 +13,29 @@ A brief introduction to computer programming.
     * [compilation and execution](#compilation-and-execution)
   * [variables and types](#variables-and-types)
     * [common types](#common-types)
-  * [best practices](#best-practices)
-    * [coding style](#coding-style)
-    * [comments](#comments)
 * [part two](#part-two)
   * [reading input](#reading-input)
   * [control statements](#control-statements)
+    * [if](#if)
+    * [comparison operators](#comparison-operators)
   * [loops and arrays](#loops-and-arrays)
+    * [arrays](#arrays)
+    * [for loop](#for-loop)
+    * [nested loops](#nested-loops)
+    * [while loop](#while-loop)
+    * [infinite loop](#infinite-loop)
+    * [break statement](#break-statement)
+  * [exercise 1-5](#exercises-1-5)
+* [part three](#part-three)
+  * Under construction...
+* [part four](#part-four)
+  * Under construction...
+* [part five](#part-five)
+  * [best practices](#best-practices)
+    * [coding style](#coding-style)
+    * [naming](#naming)
+    * [comments](#comments)
+
 
 # about this tutorial
 This introduction to programming is for anybody interested in learning how to
@@ -230,60 +246,6 @@ supporting library.
 
 ## scope
 [TODO]
-
-## best practices 
-Let's quickly overview some best practices in programming.
-
-### coding style
-Even though it is quite early in your programming endeavors, it is well worth
-talking about coding style. In the C++ programming language there is no
-limitations on how the code is organized in regards to white spaces. For
-example, we could write our `doubleValue` function in the following ways:
-```c++
-int doubleValue(int x){int y = x*2;return y;}
-```
-or
-```c++
-int 
-doubleValue
-(int x)
-{int y = 
-x*2;
-return y;}
-```
-These are both valid in the C++ language. However, as you can see, our first
-implementation of `doubleValue` is much more readable. This is why style is
-important, you always want to make sure your programs are easy to read, because
-you never know who is going to be reading them. There is no restriction on
-style, however, it is best to adhere to community guidelines and best practices.
-My general style rules in programming are: 1) "above all, be consistent", 
-2) "optimize for the reader, not the writer".
-
-### comments
-In C++, and in most programming languages, there is the ability to add notes in
-the code. These brief notes, which are referred to as comments, are ignored by
-the compiler, but offer to the programmers the ability to explain and document
-the code. 
-
-There are two types of comments that C++ supports, in-line comments (`//`) and
-block comments (`/* */`). In-line comments are comments that are meant to only
-span across the same line, while block comments can span multiple lines; denoted
-by the starting tag `/*` and ending where the next `*/` is found. 
-Comments are very useful for documenting the code and usually encouraged for
-documenting a function or a class' purpose. Let's look at what our `doubleValue`
-function would look like if it were documented with some comments.
-```c++
-/*
- * Take an integer input and return its value doubled.
- * @param x input value to double
- * @return the result of doubling the input value
- */
-int doubleValue(int x) 
-{
-  int y = x*2; // assign resulting variable before returning
-  return y; 
-}
-```
 
 This concludes part one of my introduction to programming. In this section we
 have learned the basics of a computer program, and how to write, compile and 
@@ -592,11 +554,79 @@ you have attempted your own solution. Good luck!
 Let's now talk about some programming theory.
 
 ## data structures
-[TODO]
-
 ## algorithms
 [TODO]
 
 # part four
+## structs
 ## classes
 [TODO]
+
+# part five
+## best practices 
+Let's quickly overview some best practices in programming.
+
+### coding style
+Even though it is quite early in your programming endeavors, it is well worth
+talking about coding style. In the C++ programming language there is no
+limitations on how the code is organized in regards to white spaces. For
+example, we could write our `doubleValue` function in the following ways:
+```c++
+int doubleValue(int x){int y = x*2;return y;}
+```
+or
+```c++
+int 
+doubleValue
+(int x)
+{int y = 
+x*2;
+return y;}
+```
+These are both valid in the C++ language. However, as you can see, our first
+implementation of `doubleValue` is much more readable. This is why style is
+important, you always want to make sure your programs are easy to read, because
+you never know who is going to be reading them. There is no restriction on
+style, however, it is best to adhere to community guidelines and best practices.
+My general style rules in programming are: 1) "above all, be consistent", 
+2) "optimize for the reader, not the writer".
+
+### naming
+When programming in any language it is always good practice to name your
+variables according to their purpose. For example, if I have a integer value
+that represents the length of a string, it would be best to declare it as `int
+len;` or `int stringLen;`. Again, this isn't required, but increases readability
+of your program and conveys to the user the variables purpose. 
+
+In addition to naming appropriately, using short and concise names is highly
+encouraged. If you need more than one word to describe your variable, which is
+very common, feel free to use the *camelCase* formatting. By capitalizing the
+start of the next word, users will be able to easily read the multi-word
+variable name. Notice that the first letter is always capitalized.
+
+### comments
+In C++, and in most programming languages, there is the ability to add notes in
+the code. These brief notes, which are referred to as comments, are ignored by
+the compiler, but offer to the programmers the ability to explain and document
+the code. 
+
+There are two types of comments that C++ supports, in-line comments (`//`) and
+block comments (`/* */`). In-line comments are comments that are meant to only
+span across the same line, while block comments can span multiple lines; denoted
+by the starting tag `/*` and ending where the next `*/` is found. 
+Comments are very useful for documenting the code and usually encouraged for
+documenting a function or a class' purpose. Let's look at what our `doubleValue`
+function would look like if it were documented with some comments.
+```c++
+/*
+ * Take an integer input and return its value doubled.
+ * @param x input value to double
+ * @return the result of doubling the input value
+ */
+int doubleValue(int x) 
+{
+  int y = x*2; // assign resulting variable before returning
+  return y; 
+}
+```
+
