@@ -247,7 +247,54 @@ supporting library.
 | vector | `<vector>` | A sequence of a specific type | `vector<int> integers = {1, 4, 8, 9};` |
 
 ## scope
-[TODO]
+Every variable in a program has a region of visibility, or *scope*. In other
+words, a variable can only be used by a part of your program if it is declared
+within the appropriate scope. Though there isn't a precise definition of scope, 
+we generally perceive a *block*, *function* or *file* as a scope's region. A
+*block* of code in C++ is denoted by the open and close curly brackets (`{ }`).
+A *block* of code can be the body of a function or a control statement.
+
+Two or more variables with the same name can <b>not</b> exist in the same scope,
+but names can be reused if the scopes are different. Common terms that are used
+in regards to scope are phrases such as *global variable* or *local variable*. 
+
+The example below exibits and explains some global and local variable scopes.
+```c++
+#include <iostream>
+
+using namespace std;
+
+int a = 5; // a is a global variable, because it is declared outside of any
+           // block of code. it is accessible to anything within this file
+
+int myFunction()
+{
+  int x = 5; // x is a local variable, who's scope is within this function
+
+  a = 1; // because a is global it can be accessed here
+  
+  return x-2;
+}
+
+int main()
+{
+  int x = myFunction(); // we can reuse the variable name x because it doesn't 
+                        // conflict with scope of myFunction
+
+  cout << "x = " << x << endl  
+       << "a = " << a << endl; // because a is global it can also be access here
+
+  return 0; 
+}
+```
+The output after running this program will be:
+```
+x = 3
+a = 3
+```
+If we were to attempt to declare another variable within `main` or `myFunction`
+and name it `a`, we would get a compiler error stating that we have duplicate
+declaration of the variable `a`.
 
 ## comments
 In C++, and in most programming languages, there is the ability to add notes in
