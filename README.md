@@ -13,6 +13,8 @@ A brief introduction to computer programming.
     * [compilation and execution](#compilation-and-execution)
   * [variables and types](#variables-and-types)
     * [common types](#common-types)
+  * [scope](#scope)
+  * [comments](#comments)
 * [part two](#part-two)
   * [reading input](#reading-input)
   * [control statements](#control-statements)
@@ -34,7 +36,7 @@ A brief introduction to computer programming.
   * [best practices](#best-practices)
     * [coding style](#coding-style)
     * [naming](#naming)
-    * [comments](#comments)
+    * [documenting-the-code](#document-the-code)
 
 
 # about this tutorial
@@ -100,7 +102,7 @@ introduction we will be using the C++ programming language, a powerful,
 general-purpose language widely used in practice today. 
 
 ### functions
-A program is made of many tiny units we call functions. A program function is
+A program is made of many tiny units we call *functions*. A program function is
 conceptually the same as a mathematical function. Take `y = f(x)` as an example. 
 The function `f` takes as input a value, `x`, and returns a different value, `y`. 
 Let's take a look at an example function in C++.
@@ -115,23 +117,23 @@ The first line is declaring a function named `doubleValue`, which takes in an
 integer value we're calling `x` and returns another integer value (`int` stands
 for integer). As you can guess, this function's purpose is to double the value
 given and return its result. The second line is an open curly bracket (`{`) used
-to indicate the start of the function body. The body of the function is where we
-perform all the *hard work*. Within the body we have lines of code, separated by
-semi-colons (`;`), performing the tasks to fulfill the function's purpose.  The
-third line declares a new variable y, which is assigned the value of `x`
-multiplied by `2`. The last statement of the body is typically a return
-statement, which outputs (returns) the result of all of our *hard work*.
+to indicate the start of the function *body*. The *body* of the function is
+where we perform all the "hard work". Within the body we have lines of code,
+separated by semi-colons (`;`), performing the tasks to fulfill the function's
+purpose. The third line declares a new variable `y`, which is assigned the value
+of `x` multiplied by `2`. The last statement of the body is typically a return
+statement, which outputs (aka returns) the result of all of our "hard work".
 Finally, we have a close curly bracket (`}`) indicating the end of the body,
 thus the end of this function.
 
 Now, when we want to use this function, or *call* this function, we can write 
 the following:
 ```c++
-int y = doubleValue(2);
+int a = doubleValue(2);
 ```
 In this line of code we have *called* the `doubleValue` function and assigned 
-the return value (4, in this case) to an integer variable named `y`. We will
-talk more about variables and *assignment* more in detail later.
+the return value (4, in this case) to an integer variable named `a`. We will
+talk more about variables and *assignment* in further detail later.
 
 ### the main function
 There is special function that is required in all C++ programs - the `main`
@@ -156,10 +158,10 @@ int main()
 }
 ```
 Let's break this down line by line. The first line is what is known as an
-include statement. An include statement's purpose is to allow usage of functions
-in an already written program (or library) in the program you are writing. In
-this particular case we are importing `iostream`, a piece of the C++ standard
-library that provides input/output stream functionality.
+*include* statement. An include statement's purpose is to allow usage of
+functions in an already written program (or library) in the program you are
+writing. In this particular case we are importing `iostream`, a piece of the C++
+standard library that provides input/output stream functionality.
 
 For simplicity purposes we will skip the second line of code, `using namespace
 std;`. Don't worry, we will come back to this later. 
@@ -247,7 +249,21 @@ supporting library.
 ## scope
 [TODO]
 
-This concludes part one of my introduction to programming. In this section we
+## comments
+In C++, and in most programming languages, there is the ability to add notes in
+the code. These brief notes, which are referred to as *comments*, are ignored by
+the compiler, but offer to the programmers the ability to explain and document
+the code. 
+
+There are two types of comments that C++ supports, in-line comments (`//`) and
+block comments (`/* */`). In-line comments are comments that are meant to only
+span across the same line, while block comments can span multiple lines; denoted
+by the starting tag `/*` and ending where the next `*/` is found. 
+Comments are very useful for documenting the code and usually encouraged for
+documenting a function or a class' purpose. 
+
+
+This concludes part one of *introduction to programming*. In this section we
 have learned the basics of a computer program, and how to write, compile and 
 execute C++ code. Now let's really start to dig into the fun stuff! 
 
@@ -619,19 +635,12 @@ very common, feel free to use the *camelCase* formatting. By capitalizing the
 start of the next word, users will be able to easily read the multi-word
 variable name. Notice that the first letter is always capitalized.
 
-### comments
-In C++, and in most programming languages, there is the ability to add notes in
-the code. These brief notes, which are referred to as comments, are ignored by
-the compiler, but offer to the programmers the ability to explain and document
-the code. 
-
-There are two types of comments that C++ supports, in-line comments (`//`) and
-block comments (`/* */`). In-line comments are comments that are meant to only
-span across the same line, while block comments can span multiple lines; denoted
-by the starting tag `/*` and ending where the next `*/` is found. 
-Comments are very useful for documenting the code and usually encouraged for
-documenting a function or a class' purpose. Let's look at what our `doubleValue`
-function would look like if it were documented with some comments.
+### documenting the code
+It is often encouraged to document your code using comments formatted for a
+post-processor. Often times documentation (ex. PDFs) are generated by parsing
+the comments in the code.
+Let's look at what our `doubleValue` function would look like if it were
+documented with some comments.
 ```c++
 /*
  * Take an integer input and return its value doubled.
