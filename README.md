@@ -629,7 +629,7 @@ solutions within the `exercises/solutions` folder, but try not to peek until
 you have attempted your own solution. Good luck!
 
 # part three
-Let's now talk about some programming theory.
+Let's now talk about some programming theory and computer science.
 
 ## data structures
 ## algorithms
