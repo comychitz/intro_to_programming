@@ -15,6 +15,7 @@ A brief introduction to computer programming.
     * [common types](#common-types)
   * [scope](#scope)
   * [comments](#comments)
+  * [development environment](#development-environment)
 * [part two](#part-two)
   * [reading input](#reading-input)
   * [control statements](#control-statements)
@@ -50,6 +51,8 @@ computer with a basic text editor and C++ compiler. Running a Linux (or Unix
 based, such as MacOS) operating system is preferred (but not required). If you
 have an Integrated Development Environment (IDE) you'd like to use instead, by
 all means feel free to use. 
+
+<b>NOTE:</b> To quickly get started with an IDE see [this page]()
 
 # part one
 ## what is programming? <a name="what-is-programming"></a>
@@ -309,6 +312,7 @@ by the starting tag `/*` and ending where the next `*/` is found.
 Comments are very useful for documenting the code and usually encouraged for
 documenting a function or a class' purpose. 
 
+## development environment
 
 This concludes part one of *introduction to programming*. In this section we
 have learned the basics of a computer program, and how to write, compile and 
