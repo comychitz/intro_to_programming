@@ -52,7 +52,7 @@ based, such as MacOS) operating system is preferred (but not required). If you
 have an Integrated Development Environment (IDE) you'd like to use instead, by
 all means feel free to use. 
 
-<b>NOTE:</b> To quickly get started with an IDE see [this page]()
+*<b>NOTE:</b> To quickly get started with an IDE see [this page](https://github.com/comychitz/intro_to_programming/blob/master/DevEnv.md).*
 
 # part one
 ## what is programming? <a name="what-is-programming"></a>
